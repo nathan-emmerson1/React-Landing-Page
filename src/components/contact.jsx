@@ -21,10 +21,10 @@ export const Contact = (props) => {
     e.preventDefault();
     console.log(name, email, message);
     
-    {/* replace below with your own Service ID, Template ID and Public Key from your EmailJS account */ }
+   
     
     emailjs
-      .sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", e.target, "YOUR_PUBLIC_KEY")
+      .sendForm("service_8qa1liq", "template_vgivfct", e.target, "Z-E6dEcPRw-rGrscd")
       .then(
         (result) => {
           console.log(result.text);
@@ -58,6 +58,7 @@ export const Contact = (props) => {
                         name="name"
                         className="form-control"
                         placeholder="Name"
+                        value={name}
                         required
                         onChange={handleChange}
                       />
@@ -72,6 +73,7 @@ export const Contact = (props) => {
                         name="email"
                         className="form-control"
                         placeholder="Email"
+                        value={email}
                         required
                         onChange={handleChange}
                       />
@@ -86,6 +88,7 @@ export const Contact = (props) => {
                     className="form-control"
                     rows="4"
                     placeholder="Message"
+                    value={message}
                     required
                     onChange={handleChange}
                   ></textarea>
